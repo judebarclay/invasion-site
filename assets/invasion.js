@@ -204,7 +204,7 @@ var INVASION = {
 
   // Every loop on the page plays while it's on screen
   var vids = document.querySelectorAll(".vthumb video, .tvid video, .bento-item video, .feature-media");
-  if (!reduce && "IntersectionObserver" in window) {
+  if ("IntersectionObserver" in window) {
     var vio = new IntersectionObserver(function (es) {
       es.forEach(function (e) {
         if (!e.target.isConnected) return;
