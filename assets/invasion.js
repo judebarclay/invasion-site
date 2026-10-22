@@ -29,7 +29,7 @@ var INVASION = {
     { id: "rE1CzPh3_bY", clip: "inv-wed-band", t: "Nightly worship", p: "Every night at 7 PM the whole room comes together." },
     { id: "onCNPrUt8Uw", clip: "inv-fri-baptism", t: "Baptisms", p: "Young people going public with their faith." },
     { id: "gTwzLdiZFq0", clip: "inv-rev-fri", t: "Encounter", p: "Every service ends with space to respond and meet God." },
-    { link: "https://instagram.com/invasionministries", clip: "inv-thu-sports", t: "Sports and tournaments", p: "Volleyball, basketball, eSports and more, with real trophies." }
+    { link: "https://instagram.com/invasionministries", clip: "inv-thu-sports", t: "Sports and tournaments", p: "Volleyball, basketball, eSports, and more, with real trophies." }
   ],
   videos: {
     "2026": [
