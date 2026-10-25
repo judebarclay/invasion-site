@@ -6,9 +6,9 @@
 ------------------------------------------------------------------- */
 var INVASION = {
   nights: [
-    { date: "2026-11-11", time: "7 PM", church: "Covenant of Peace International", city: "Dayton, OH", register: "" },
-    { date: "2026-11-12", time: "7 PM", church: "Lake Michigan Christian Center", city: "Bridgman, MI", register: "" },
-    { date: "2026-11-13", time: "7 PM", church: "Resurrection Life Church", city: "Clarksville, IN", register: "" }
+    { date: "2026-11-11", time: "7 PM", church: "Covenant of Peace International", city: "Dayton, OH", register: "https://form.jotform.com/262865282851163" },
+    { date: "2026-11-12", time: "7 PM", church: "Lake Michigan Christian Center", city: "Bridgman, MI", register: "https://form.jotform.com/262864499215166" },
+    { date: "2026-11-13", time: "7 PM", church: "Resurrection Life Church", city: "Clarksville, IN", register: "https://form.jotform.com/262864797763175" }
   ],
   links: {
     youtube: "https://www.youtube.com/@InvasionMinistries",
