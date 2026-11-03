@@ -1,14 +1,15 @@
 /* ------------------------------------------------------------------
    EDIT HERE: worship nights, links and videos.
    Each night: date (YYYY-MM-DD), time, church, city, register (URL).
-   Leave date empty to show "Date coming"; leave register empty to
+   Leave date empty to show "Date coming" (set month to show e.g. "Dec"); soon: true hides the Register button; leave register empty to
    send people to the host form until registration opens.
 ------------------------------------------------------------------- */
 var INVASION = {
   nights: [
     { date: "2026-11-11", time: "7 PM", church: "Covenant of Peace International", city: "Dayton, OH", register: "https://form.jotform.com/262865282851163" },
     { date: "2026-11-12", time: "7 PM", church: "Lake Michigan Christian Center", city: "Bridgman, MI", register: "https://form.jotform.com/262864499215166" },
-    { date: "2026-11-13", time: "7 PM", church: "Resurrection Life Church", city: "Clarksville, IN", register: "https://form.jotform.com/262864797763175" }
+    { date: "2026-11-13", time: "7 PM", church: "Resurrection Life Church", city: "Clarksville, IN", register: "https://form.jotform.com/262864797763175" },
+    { date: "", month: "Dec", time: "", church: "Adrian, MI", city: "Details and tickets coming soon", register: "", soon: true }
   ],
   links: {
     youtube: "https://www.youtube.com/@InvasionMinistries",
@@ -105,14 +106,14 @@ var INVASION = {
       li.className = "night";
       li.innerHTML = '<div class="night-date">' + (d
         ? months[d.getMonth()] + " " + d.getDate() + "<small>" + days[d.getDay()] + " · " + n.time + "</small>"
-        : "Soon<small>Date coming</small>") + '</div>' +
+        : (n.month || "Soon") + "<small>Date coming</small>") + '</div>' +
         '<div class="night-where"><h3></h3><p></p></div>' +
-        '<a class="btn">Register</a>';
+        (n.soon ? '' : '<a class="btn">Register</a>');
       li.querySelector("h3").textContent = n.church;
       li.querySelector("p").textContent = n.city;
       var a = li.querySelector("a");
-      a.href = n.register || "mailto:" + L.email + "?subject=" + encodeURIComponent("Register: " + n.city + " worship night");
-      if (n.register) { a.target = "_blank"; a.rel = "noopener"; }
+      if (a) a.href = n.register || "mailto:" + L.email + "?subject=" + encodeURIComponent("Register: " + n.city + " worship night");
+      if (a && n.register) { a.target = "_blank"; a.rel = "noopener"; }
       list.appendChild(li);
     });
   }
